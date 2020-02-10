@@ -7,11 +7,18 @@
     "test": "jest  --verbose",
     "test:update": "jest --verbose --u",
     "test:coverage": "jest --verbose  --coverage",
-    "test:watch": "jest --verbose  --watchAll"
+    "test:watch": "jest --verbose  --watchAll",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UlisesGascon/check-my-headers.git"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   },
   "keywords": [
     "http",
@@ -28,6 +35,7 @@
   },
   "homepage": "https://github.com/UlisesGascon/check-my-headers#readme",
   "devDependencies": {
-    "jest": "^25.1.0"
+    "jest": "^25.1.0",
+    "standard": "^14.3.1"
   }
 }
