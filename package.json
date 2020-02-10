@@ -1,0 +1,27 @@
+{
+  "name": "check-my-headers",
+  "version": "0.0.1",
+  "description": "Fast and simple way to check any HTTP Headers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UlisesGascon/check-my-headers.git"
+  },
+  "keywords": [
+    "http",
+    "headers",
+    "security"
+  ],
+  "author": {
+    "name": "Ulises Gascón",
+    "url": "https://github.com/ulisesGascon"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UlisesGascon/check-my-headers/issues"
+  },
+  "homepage": "https://github.com/UlisesGascon/check-my-headers#readme"
+}
