@@ -20,6 +20,12 @@
       "jest"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test:coverage"
+    }
+  },
   "keywords": [
     "http",
     "headers",
@@ -35,6 +41,7 @@
   },
   "homepage": "https://github.com/UlisesGascon/check-my-headers#readme",
   "devDependencies": {
+    "husky": "^4.2.1",
     "jest": "^25.1.0",
     "standard": "^14.3.1"
   }
