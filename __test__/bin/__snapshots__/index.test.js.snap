@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CLI Behaviour Error process: Missing URL 1`] = `
+"/Users/ulisesgascon/Desktop/WORKSPACE/my_stuff/check-my-headers/bin/check-my-headers.js
+"
+`;
+
+exports[`CLI Behaviour Success process: external url 1`] = `
+"Welcome to check-my-headers@0.0.1
+The analysis has started...
+Hello World, this check-my-headers!
+"
+`;
+
+exports[`CLI Behaviour Success process: localhost url 1`] = `
+"Welcome to check-my-headers@0.0.1
+The analysis has started...
+Hello World, this check-my-headers!
+"
+`;
