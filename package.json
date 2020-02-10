@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Fast and simple way to check any HTTP Headers",
   "main": "index.js",
+  "bin": {
+    "check-my-headers": "./bin/check-my-headers.js"
+  },
   "scripts": {
     "test": "jest  --verbose",
     "test:update": "jest --verbose --u",
