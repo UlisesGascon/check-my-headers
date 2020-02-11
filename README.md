@@ -19,6 +19,10 @@
   <img src="./.github/screen.png" alt="Screenshot of npm module called is check my headers that in a aast and simple way check any HTTP Headers" />
 </p>
 
+<p align="center">
+  Thanks <a href="https://github.com/lirantal">Liran Tal</a> and the amazing <a href="https://snyk.io">Snyk team</a> for your support 😊
+</p>
+
 </p>
 
 
