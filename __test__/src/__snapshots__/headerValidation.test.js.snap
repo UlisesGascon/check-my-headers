@@ -5,23 +5,7 @@ Object {
   "headers": null,
   "messages": Array [
     Object {
-      "msg": "Missing field: Content-Security-Policy",
-      "type": "error",
-    },
-    Object {
-      "msg": "Missing field: Referrer-Policy",
-      "type": "error",
-    },
-    Object {
-      "msg": "Missing field: Strict-Transport-Security",
-      "type": "error",
-    },
-    Object {
-      "msg": "Missing field: X-XSS-Protection",
-      "type": "error",
-    },
-    Object {
-      "msg": "Missing field: X-Content-Type-Options",
+      "msg": "Remove field: server",
       "type": "error",
     },
     Object {
@@ -41,16 +25,12 @@ Object {
       "type": "warn",
     },
     Object {
-      "msg": "Missing field: Cache-Control",
-      "type": "warn",
-    },
-    Object {
       "msg": "Missing field: content-length",
       "type": "warn",
     },
     Object {
-      "msg": "Extra field: server",
-      "type": "info",
+      "msg": "Deprecated field: x-frame-options",
+      "type": "warn",
     },
     Object {
       "msg": "Extra field: status",
@@ -65,35 +45,7 @@ Object {
       "type": "info",
     },
     Object {
-      "msg": "Extra field: cache-control",
-      "type": "info",
-    },
-    Object {
-      "msg": "Extra field: strict-transport-security",
-      "type": "info",
-    },
-    Object {
-      "msg": "Extra field: x-frame-options",
-      "type": "info",
-    },
-    Object {
-      "msg": "Extra field: x-content-type-options",
-      "type": "info",
-    },
-    Object {
-      "msg": "Extra field: x-xss-protection",
-      "type": "info",
-    },
-    Object {
-      "msg": "Extra field: referrer-policy",
-      "type": "info",
-    },
-    Object {
       "msg": "Extra field: expect-ct",
-      "type": "info",
-    },
-    Object {
-      "msg": "Extra field: content-security-policy",
       "type": "info",
     },
     Object {

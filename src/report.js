@@ -24,7 +24,7 @@ const getErrors = () => filterMessages('error')
 const getInfo = () => filterMessages('info')
 
 const setStatus = (currentStatus) => { status = currentStatus }
-const getStauts = () => status
+const getStatus = () => status
 
 const setHeaders = (currentHeaders) => { headers = currentHeaders }
 const getHeaders = () => headers
@@ -35,4 +35,4 @@ const resetReport = () => {
   headers = null
 }
 
-module.exports = { addError, addWarning, addInfo, getAll, getWarnings, getErrors, getInfo, resetReport, setStatus, getStauts, setHeaders, getHeaders }
+module.exports = { addError, addWarning, addInfo, getAll, getWarnings, getErrors, getInfo, resetReport, setStatus, getStatus, setHeaders, getHeaders }

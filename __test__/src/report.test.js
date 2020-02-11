@@ -1,4 +1,4 @@
-const { addError, addWarning, addInfo, getAll, getWarnings, getErrors, getInfo, resetReport, setStatus, getStauts, setHeaders, getHeaders } = require('../../src/report')
+const { addError, addWarning, addInfo, getAll, getWarnings, getErrors, getInfo, resetReport, setStatus, getStatus, setHeaders, getHeaders } = require('../../src/report')
 
 // Reset Mocks
 beforeEach(resetReport)
@@ -35,9 +35,9 @@ describe('Reporting behaviour', () => {
 
   describe('Handle status', () => {
     test('Should manage the status data', () => {
-      expect(getStauts()).toStrictEqual(null)
+      expect(getStatus()).toStrictEqual(null)
       addData()
-      expect(getStauts()).toStrictEqual(200)
+      expect(getStatus()).toStrictEqual(200)
     })
   })
 
