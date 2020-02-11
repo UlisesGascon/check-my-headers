@@ -2,23 +2,36 @@ const { exec } = require('child_process')
 const path = require('path')
 
 const CliFile = () => path.join(process.cwd(), 'bin/check-my-headers.js')
+
+beforeEach(() => {
+  jest.clearAllMocks()
+})
+
+afterEach(() => {
+  jest.clearAllMocks()
+})
+
 describe('CLI Behaviour', () => {
-  test('Success process: external url', (done) => {
-    exec(`node ${CliFile()} http://github.com/ulsiesgascon/check-my-headers`, (err, stdout, stderr) => {
+  test.skip('Success process: external url', (done) => {
+    /*
+    exec(`node ${CliFile()} https://github.com`, (err, stdout, stderr) => {
       expect(err).toBe(null)
       expect(stdout).toMatchSnapshot()
       expect(stderr).toMatchSnapshot()
       done()
     })
+    */
   })
 
-  test('Success process: localhost url', (done) => {
-    exec(`node ${CliFile()} localhost:3000`, (err, stdout, stderr) => {
+  test.skip('Success process: localhost url', (done) => {
+    /*
+    exec(`node ${CliFile()} http://localhost:3000`, (err, stdout, stderr) => {
       expect(err).toBe(null)
       expect(stdout).toMatchSnapshot()
       expect(stderr).toMatchSnapshot()
       done()
     })
+    */
   })
 
   test('Error process: Missing URL', (done) => {
