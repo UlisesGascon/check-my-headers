@@ -1,4 +1,16 @@
-const { isUrlValid } = require('../../src/helpers')
+const { isUrlValid, makeRequest } = require('../../src/helpers')
+const githubRequest = require('../__fixtures__/github_request.json')
+
+const cleanUp = () => {
+  jest.clearAllMocks()
+}
+
+// Mocking
+jest.mock('request-promise')
+
+// Reset Mocks
+beforeEach(cleanUp)
+afterEach(cleanUp)
 
 describe('isUrlValid behaviour', () => {
   test('Should match following URLs', () => {
@@ -19,5 +31,21 @@ describe('isUrlValid behaviour', () => {
     expect(isUrlValid([])).toBe(false)
     expect(isUrlValid(100)).toBe(false)
     expect(isUrlValid('http://domain')).toBe(false)
+  })
+})
+
+describe('makeRequest behaviour', () => {
+  test('Should match following URLs', () => {
+    return makeRequest('https://github.com')
+      .then(({ headers, statusCode }) => {
+        expect(headers).toBe(githubRequest.headers)
+        expect(statusCode).toBe(githubRequest.statusCode)
+      })
+      .catch(err => expect(err).toBe(null))
+  })
+
+  test('Should handle connection problems and not responding URLs', () => {
+    return makeRequest('https://error.connection')
+      .catch(err => expect(err.message).toMatch('Error: getaddrinfo ENOTFOUND'))
   })
 })
