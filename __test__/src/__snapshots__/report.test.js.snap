@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reporting behaviour Handle headers Should manage the headers data 1`] = `
+Object {
+  "another-item": "just another content",
+  "item": "content",
+}
+`;
+
+exports[`Reporting behaviour Handle messages Should add messages at error level 1`] = `
+Array [
+  Object {
+    "msg": "New Error 1",
+    "type": "error",
+  },
+]
+`;
+
+exports[`Reporting behaviour Handle messages Should add messages at info level 1`] = `
+Array [
+  Object {
+    "msg": "New info 1",
+    "type": "info",
+  },
+]
+`;
+
+exports[`Reporting behaviour Handle messages Should add messages at warning level 1`] = `
+Array [
+  Object {
+    "msg": "New Warning 1",
+    "type": "warn",
+  },
+]
+`;
+
+exports[`Reporting behaviour Handle messages Should filter the messages at error level 1`] = `
+Array [
+  Object {
+    "msg": "This is an error message 1",
+    "type": "error",
+  },
+  Object {
+    "msg": "This is an error message 2",
+    "type": "error",
+  },
+]
+`;
+
+exports[`Reporting behaviour Handle messages Should filter the messages at info level 1`] = `
+Array [
+  Object {
+    "msg": "This is an info message 1",
+    "type": "info",
+  },
+  Object {
+    "msg": "This is an info message 2",
+    "type": "info",
+  },
+]
+`;
+
+exports[`Reporting behaviour Handle messages Should filter the messages at warning level 1`] = `
+Array [
+  Object {
+    "msg": "This is a warning message 1",
+    "type": "warn",
+  },
+  Object {
+    "msg": "This is a warning message 2",
+    "type": "warn",
+  },
+]
+`;
+
+exports[`Reporting behaviour Reset data Should clean data 1`] = `
+Object {
+  "headers": Object {
+    "another-item": "just another content",
+    "item": "content",
+  },
+  "messages": Array [
+    Object {
+      "msg": "This is an error message 1",
+      "type": "error",
+    },
+    Object {
+      "msg": "This is an error message 2",
+      "type": "error",
+    },
+    Object {
+      "msg": "This is a warning message 1",
+      "type": "warn",
+    },
+    Object {
+      "msg": "This is a warning message 2",
+      "type": "warn",
+    },
+    Object {
+      "msg": "This is an info message 1",
+      "type": "info",
+    },
+    Object {
+      "msg": "This is an info message 2",
+      "type": "info",
+    },
+  ],
+  "status": 200,
+}
+`;
