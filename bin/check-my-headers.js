@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 (async () => {
   const checkMyHeaders = require('../src/index')
-  const {getErrors} = require('../src/report')
+  const { getErrors } = require('../src/report')
   const { printError, printInfo, printSuccess, generateReport } = require('./helpers')
   const pkg = require('../package.json')
 
