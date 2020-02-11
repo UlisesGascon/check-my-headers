@@ -1,5 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`General CLI Reporting Should generate a valid report) 1`] = `
+"
+[7m[1mReport for https://github.com (200)[22m[27m
+
+[4m[1m📜  Current Headers:[22m[24m
+- date: Tue, 11 Feb 2020 17:20:48 GMT
+- content-type: text/html; charset=utf-8
+- server: GitHub.com
+- status: 200 OK
+- vary: X-PJAX, Accept-Encoding, Accept
+- etag: W/\\"alpha_things\\"
+- cache-control: max-age=0, private, must-revalidate
+- strict-transport-security: max-age=31536000; includeSubdomains; preload
+- x-frame-options: deny
+- x-content-type-options: nosniff
+- x-xss-protection: 1; mode=block
+- referrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin
+- expect-ct: max-age=2592000, report-uri=\\"https://api.github.com/_private/browser/errors\\"
+- content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com wss://live.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com customer-stories-feed.github.com spotlights-feed.github.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com
+- age: 4
+- set-cookie: COOKIE CONTENT
+- accept-ranges: bytes
+- transfer-encoding: chunked
+- connection: close
+- x-github-request-id: request-ID
+
+[31m[4m[1m🚨  Errors:[22m[24m[39m
+- Remove field: server
+
+[33m[4m[1m🚧  Warnings:[22m[24m[39m
+- Missing field: access-control-allow-origin
+- Missing field: access-control-allow-methods
+- Missing field: access-control-allow-headers
+- Missing field: link
+- Missing field: content-length
+- Deprecated field: x-frame-options
+
+[34m[4m[1m🔍  Info:[22m[24m[39m
+- Extra field: status
+- Extra field: vary
+- Extra field: etag
+- Extra field: expect-ct
+- Extra field: set-cookie
+- Extra field: accept-ranges
+- Extra field: transfer-encoding
+- Extra field: connection
+- Extra field: x-github-request-id
+====================
+  "
+`;
+
 exports[`General CLI helpers Terminal format helpers (colors) 1`] = `undefined`;
 
 exports[`General CLI helpers Terminal format helpers (colors) 2`] = `undefined`;
