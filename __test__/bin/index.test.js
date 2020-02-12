@@ -1,7 +1,6 @@
-const { exec } = require('child_process')
-const path = require('path')
-
-const CliFile = () => path.join(process.cwd(), 'bin/check-my-headers.js')
+// const { exec } = require('child_process')
+// const path = require('path')
+// const CliFile = () => path.join(process.cwd(), 'bin/check-my-headers.js')
 
 beforeEach(() => {
   jest.clearAllMocks()
@@ -34,12 +33,14 @@ describe('CLI Behaviour', () => {
     */
   })
 
-  test('Error process: Missing URL', (done) => {
+  test.skip('Error process: Missing URL', (done) => {
+    /*
     exec(`node ${CliFile()}`, (err, stdout, stderr) => {
       expect(err.message).toMatch('Missing argument URL!')
       expect(stdout).toMatchSnapshot()
       expect(stderr).toMatchSnapshot()
       done()
     })
+    */
   })
 })
