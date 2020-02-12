@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CLI Behaviour Error process: Missing URL 1`] = `
+"👋  Welcome to check-my-headers@0.1.0
+👉  Example: check-my-headers https://github.com/ulisesgascon/check-my-headers
+"
+`;
+
+exports[`CLI Behaviour Error process: Missing URL 2`] = `
+"[31m[1m😬  Missing argument URL![22m[39m
+"
+`;
