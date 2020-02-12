@@ -49,6 +49,62 @@ $ npx check-my-headers
 👉  Example: check-my-headers https://github.com/ulisesgascon/check-my-headers
 ```
 
+## Module
+
+Using `check-my-headers` in your project.
+
+```js
+const checkMyHeaders = require('check-my-headers')
+
+checkMyHeaders("http://example.com")
+.then(({ messages, headers, status }) => {
+    console.log(`Status code: ${status}`)
+    console.log(`Messages:`)
+    console.log(messages)
+    console.log("Current headers:")
+    console.log(headers)
+})
+```
+
+Output:
+```
+Status code: 200
+Messages:
+[
+  { msg: 'Remove field: server', type: 'error' },
+  { msg: 'Missing field: content-security-policy', type: 'error' },
+  { msg: 'Missing field: referrer-policy', type: 'error' },
+  { msg: 'Missing field: strict-transport-security', type: 'error' },
+  { msg: 'Missing field: x-xss-protection', type: 'error' },
+  { msg: 'Missing field: x-content-type-options', type: 'error' },
+  { msg: 'Missing field: access-control-allow-origin', type: 'warn' },
+  { msg: 'Missing field: access-control-allow-methods', type: 'warn' },
+  { msg: 'Missing field: access-control-allow-headers', type: 'warn' },
+  { msg: 'Missing field: link', type: 'warn' },
+  { msg: 'Deprecated field: expires', type: 'warn' },
+  { msg: 'Extra field: etag', type: 'info' },
+  { msg: 'Extra field: last-modified', type: 'info' },
+  { msg: 'Extra field: vary', type: 'info' },
+  { msg: 'Extra field: x-cache', type: 'info' },
+  { msg: 'Extra field: connection', type: 'info' }
+]
+Current headers:
+{
+  age: '534610',
+  'cache-control': 'max-age=604800',
+  'content-type': 'text/html; charset=UTF-8',
+  date: 'Wed, 12 Feb 2020 19:37:45 GMT',
+  etag: '"3147526947+ident"',
+  expires: 'Wed, 19 Feb 2020 19:37:45 GMT',
+  'last-modified': 'Thu, 17 Oct 2019 07:18:26 GMT',
+  server: 'ECS (nyb/1D2A)',
+  vary: 'Accept-Encoding',
+  'x-cache': 'HIT',
+  'content-length': '1256',
+  connection: 'close'
+}
+```
+
 ## Docker
 
 To build and run the container locally:
