@@ -10,7 +10,6 @@
   <a href="https://www.npmjs.org/package/check-my-headers"><img src="https://badgen.net/npm/v/check-my-headers" alt="npm version"/></a>
   <a href="https://www.npmjs.org/package/check-my-headers"><img src="https://badgen.net/npm/license/check-my-headers" alt="license"/></a>
   <a href="https://www.npmjs.org/package/check-my-headers"><img src="https://badgen.net/npm/dt/check-my-headers" alt="downloads"/></a>
-  <a href="https://codecov.io/gh/ulisesgascon/check-my-headers"><img src="https://badgen.net/codecov/c/github/ulisesgascon/check-my-headers" alt="codecov"/></a>
   <a href="https://snyk.io/test/github/ulisesgascon/check-my-headers"><img src="https://snyk.io/test/github/ulisesgascon/check-my-headers/badge.svg" alt="Known Vulnerabilities"/></a>
 </p>
 
