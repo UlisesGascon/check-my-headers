@@ -1,0 +1,56 @@
+{
+  "name": "check-my-headers",
+  "version": "0.1.0",
+  "description": "Fast and simple way to check any HTTP Headers",
+  "main": "index.js",
+  "bin": {
+    "check-my-headers": "./bin/check-my-headers.js"
+  },
+  "scripts": {
+    "test": "jest  --verbose",
+    "test:update": "jest --verbose --u",
+    "test:coverage": "jest --verbose  --coverage",
+    "test:watch": "jest --verbose  --watchAll",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UlisesGascon/check-my-headers.git"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test:coverage"
+    }
+  },
+  "keywords": [
+    "http",
+    "headers",
+    "security"
+  ],
+  "author": {
+    "name": "Ulises Gascón",
+    "url": "https://github.com/ulisesGascon"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UlisesGascon/check-my-headers/issues"
+  },
+  "homepage": "https://github.com/UlisesGascon/check-my-headers#readme",
+  "devDependencies": {
+    "husky": "4.2.1",
+    "jest": "25.1.0",
+    "standard": "14.3.1"
+  },
+  "dependencies": {
+    "chalk": "3.0.0",
+    "request": "2.88.2",
+    "request-promise": "4.2.5"
+  }
+}

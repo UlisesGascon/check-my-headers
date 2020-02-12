@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`headerValidation behaviour Should generate a valid report 1`] = `
+Object {
+  "headers": null,
+  "messages": Array [
+    Object {
+      "msg": "Remove field: server",
+      "type": "error",
+    },
+    Object {
+      "msg": "Missing field: access-control-allow-origin",
+      "type": "warn",
+    },
+    Object {
+      "msg": "Missing field: access-control-allow-methods",
+      "type": "warn",
+    },
+    Object {
+      "msg": "Missing field: access-control-allow-headers",
+      "type": "warn",
+    },
+    Object {
+      "msg": "Missing field: link",
+      "type": "warn",
+    },
+    Object {
+      "msg": "Missing field: content-length",
+      "type": "warn",
+    },
+    Object {
+      "msg": "Deprecated field: x-frame-options",
+      "type": "warn",
+    },
+    Object {
+      "msg": "Extra field: status",
+      "type": "info",
+    },
+    Object {
+      "msg": "Extra field: vary",
+      "type": "info",
+    },
+    Object {
+      "msg": "Extra field: etag",
+      "type": "info",
+    },
+    Object {
+      "msg": "Extra field: expect-ct",
+      "type": "info",
+    },
+    Object {
+      "msg": "Extra field: set-cookie",
+      "type": "info",
+    },
+    Object {
+      "msg": "Extra field: accept-ranges",
+      "type": "info",
+    },
+    Object {
+      "msg": "Extra field: transfer-encoding",
+      "type": "info",
+    },
+    Object {
+      "msg": "Extra field: connection",
+      "type": "info",
+    },
+    Object {
+      "msg": "Extra field: x-github-request-id",
+      "type": "info",
+    },
+  ],
+  "status": null,
+}
+`;
