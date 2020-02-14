@@ -1,6 +1,6 @@
 const { isUrlValid, makeRequest } = require('./helpers')
 const { setHeaders, setStatus, getAll } = require('./report')
-const { headerValidation } = require('./HeaderValidation')
+const { headerValidation } = require('./headerValidation')
 
 const checkMyHeaders = async (url) => {
   if (!isUrlValid(url)) throw new Error('Invalid URL format!')
