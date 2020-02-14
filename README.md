@@ -106,6 +106,18 @@ Current headers:
 
 ## Docker
 
+Use Docker Hub:
+
+```bash
+# Pull the image from Docker Hub:
+docker pull ulisesgascon/check-my-headers:latest
+
+# Run container:
+docker run --rm -e SCAN_URL="https://www.github.com/" ulisesgascon/check-my-headers:latest
+```
+
+`SCAN_URL` is an environment variable and its value must be replaced with the desired URL during Docker run. Docker container will exit once the scan has been completed.
+
 To build and run the container locally:
 
 ```bash
@@ -121,8 +133,6 @@ docker build --no-cache -t ulisesgascon/check-my-headers:latest .
 # Run container:
 docker run --rm -e SCAN_URL="https://www.github.com/" ulisesgascon/check-my-headers:latest
 ```
-
-`SCAN_URL` is an environment variable and its value must be replaced with the desired URL during Docker run. Docker container will exit once the scan has been completed.
 
 
 # Install
