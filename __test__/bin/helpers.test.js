@@ -1,5 +1,8 @@
 const { printError, printInfo, printSuccess, generateReport } = require('../../bin/helpers')
+const serializer = require('jest-serializer-ansi')
 const checkMyHeaders = require('../../src/index')
+
+expect.addSnapshotSerializer(serializer)
 
 // Mocking
 jest.mock('request-promise')
