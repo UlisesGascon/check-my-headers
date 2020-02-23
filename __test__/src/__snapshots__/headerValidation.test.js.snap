@@ -9,6 +9,10 @@ Object {
       "type": "error",
     },
     Object {
+      "msg": "Missing field: feature-policy",
+      "type": "error",
+    },
+    Object {
       "msg": "Missing field: access-control-allow-origin",
       "type": "warn",
     },

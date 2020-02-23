@@ -28,6 +28,7 @@ exports[`General CLI Reporting Should generate a valid report) 1`] = `
 
 [31m[4m[1m🚨  Errors:[22m[24m[39m
 - Remove field: server
+- Missing field: feature-policy
 
 [33m[4m[1m🚧  Warnings:[22m[24m[39m
 - Missing field: access-control-allow-origin

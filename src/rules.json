@@ -5,6 +5,7 @@
       "strict-transport-security",
       "x-xss-protection",
       "x-content-type-options",
+      "feature-policy",
       "date"
     ],
     "optional":[
