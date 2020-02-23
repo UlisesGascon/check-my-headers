@@ -12,11 +12,11 @@ script:
 jobs:
   include:
   - stage: npm Deployment
-  deploy:
-    edge: true
-    provider: npm
-    skip_cleanup: true
-    email: "$NPM_EMAIL"
-    api_key: "$NPM_TOKEN"
-    on:
-      tags: true
+    deploy:
+      edge: true
+      provider: npm
+      skip_cleanup: true
+      email: "$NPM_EMAIL"
+      api_key: "$NPM_TOKEN"
+      on:
+        tags: true
