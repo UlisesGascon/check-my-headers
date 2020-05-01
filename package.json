@@ -12,7 +12,9 @@
     "test:coverage": "FORCE_COLOR=3 jest --verbose  --coverage",
     "test:watch": "FORCE_COLOR=3 jest --verbose  --watchAll",
     "lint": "standard",
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -52,11 +54,13 @@
   "dependencies": {
     "chalk": "3.0.0",
     "request": "2.88.2",
-    "request-promise": "4.2.5"
+    "request-promise": "4.2.5",
+    "snyk": "^1.316.1"
   },
   "jest": {
     "snapshotSerializers": [
       "jest-serializer-ansi"
     ]
-  }
+  },
+  "snyk": true
 }
