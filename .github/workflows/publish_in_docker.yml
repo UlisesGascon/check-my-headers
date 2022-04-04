@@ -1,0 +1,35 @@
+name: Publish Library in Docker
+on:
+  release:
+    types:
+      - created
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set output
+      id: vars
+      run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+
+    - name: Check output
+      env:
+        RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+      run: |
+        echo $RELEASE_VERSION
+        echo ${{ steps.vars.outputs.tag }}
+    - name: docker login
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
+    - name: Build the Docker image
+      env:
+        RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+      run: docker build . --file Dockerfile --tag ulisesgascon/check-my-headers:$RELEASE_VERSION --tag ulisesgascon/check-my-headers:latest
+      
+    - name: Docker Push
+      run: docker push --all-tags ulisesgascon/check-my-headers

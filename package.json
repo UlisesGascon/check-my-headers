@@ -1,6 +1,6 @@
 {
   "name": "check-my-headers",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fast and simple way to check any HTTP Headers",
   "main": "index.js",
   "bin": {
@@ -13,8 +13,12 @@
     "test:watch": "FORCE_COLOR=3 jest --verbose  --watchAll",
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
   },
   "repository": {
     "type": "git",
@@ -24,12 +28,6 @@
     "env": [
       "jest"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test:coverage"
-    }
   },
   "keywords": [
     "http",
@@ -46,16 +44,19 @@
   },
   "homepage": "https://github.com/UlisesGascon/check-my-headers#readme",
   "devDependencies": {
-    "husky": "4.2.3",
-    "jest": "25.1.0",
+    "@commitlint/cli": "16.2.3",
+    "@commitlint/config-conventional": "16.2.1",
+    "@snyk/protect": "1.893.0",
+    "husky": "7.0.4",
+    "jest": "27.5.1",
     "jest-serializer-ansi": "1.0.3",
-    "standard": "14.3.1"
+    "standard": "14.3.1",
+    "standard-version": "9.3.2"
   },
   "dependencies": {
-    "chalk": "3.0.0",
+    "chalk": "4.1.2",
     "request": "2.88.2",
-    "request-promise": "4.2.5",
-    "snyk": "^1.316.1"
+    "request-promise": "4.2.6"
   },
   "jest": {
     "snapshotSerializers": [

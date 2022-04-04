@@ -1,9 +1,21 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+### [0.1.2](https://github.com/ulisesGascon/check-my-headers/compare/v0.1.1...v0.1.2) (2022-04-04)
+
+
+### Features
+
+* added support for commit linter and auto-changelog ([2f8759f](https://github.com/ulisesGascon/check-my-headers/commits/2f8759f33abd28a8c98dae54a0888e408dd43b2b))
+* migrated CI pipelines to Github Actions ([c29d651](https://github.com/ulisesGascon/check-my-headers/commits/c29d6514322b5c181a7fa7db1ad323c61cae3b4b))
+* upgrade dependencies ([e363635](https://github.com/ulisesGascon/check-my-headers/commits/e3636353e96d7674258c5622886bb3f3786cd94a))
+
+
+### Bug Fixes
+
+* package.json & .snyk to reduce vulnerabilities ([dc8a17d](https://github.com/ulisesGascon/check-my-headers/commits/dc8a17d3137f6500f56123757e1da13fa1291c3e))
+* package.json & .snyk to reduce vulnerabilities ([420352c](https://github.com/ulisesGascon/check-my-headers/commits/420352c4ee3b8458775a218e812be2c82e8a8b57))
 
 ## [0.10.0] - 2020-02-14
 
