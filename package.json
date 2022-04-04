@@ -14,7 +14,11 @@
     "lint": "standard",
     "lint:fix": "standard --fix",
     "prepare": "npm run snyk-protect",
-    "snyk-protect": "snyk-protect"
+    "snyk-protect": "snyk-protect",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
   },
   "repository": {
     "type": "git",
@@ -24,12 +28,6 @@
     "env": [
       "jest"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test:coverage"
-    }
   },
   "keywords": [
     "http",
@@ -46,11 +44,14 @@
   },
   "homepage": "https://github.com/UlisesGascon/check-my-headers#readme",
   "devDependencies": {
+    "@commitlint/cli": "16.2.3",
+    "@commitlint/config-conventional": "16.2.1",
     "@snyk/protect": "1.893.0",
     "husky": "7.0.4",
     "jest": "27.5.1",
     "jest-serializer-ansi": "1.0.3",
-    "standard": "14.3.1"
+    "standard": "14.3.1",
+    "standard-version": "9.3.2"
   },
   "dependencies": {
     "chalk": "4.1.2",
