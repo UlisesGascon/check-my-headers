@@ -62,5 +62,8 @@
       "jest-serializer-ansi"
     ]
   },
+  "engines": {
+    "node": ">=16"
+  },
   "snyk": true
 }
