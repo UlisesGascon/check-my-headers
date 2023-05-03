@@ -13,7 +13,6 @@
     "test:watch": "FORCE_COLOR=3 jest --verbose  --watchAll",
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "prepare": "npm run snyk-protect",
     "snyk-protect": "snyk-protect",
     "release": "standard-version",
     "release:minor": "standard-version --release-as minor",
