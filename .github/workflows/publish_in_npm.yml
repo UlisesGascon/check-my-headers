@@ -21,5 +21,7 @@ jobs:
   publish:
     needs: prepare
     uses: slsa-framework/slsa-github-generator/.github/workflows/builder_nodejs_slsa3.yml@5dfe44f2f2806e28957c9de7aaa1fb9973921187
+    with:
+      node-version: 18.16.0
     secrets:
       node-auth-token: ${{ secrets.NPM_TOKEN }}
