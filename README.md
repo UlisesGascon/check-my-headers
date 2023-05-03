@@ -11,6 +11,8 @@
   <a href="https://www.npmjs.org/package/check-my-headers"><img src="https://badgen.net/npm/license/check-my-headers" alt="license"/></a>
   <a href="https://www.npmjs.org/package/check-my-headers"><img src="https://badgen.net/npm/dt/check-my-headers" alt="downloads"/></a>
   <a href="https://snyk.io/test/github/ulisesgascon/check-my-headers"><img src="https://snyk.io/test/github/ulisesgascon/check-my-headers/badge.svg" alt="Known Vulnerabilities"/></a>
+  <a href="https://api.securityscorecards.dev/projects/github.com/nodejs/security-wg"><img src="https://api.securityscorecards.dev/projects/github.com/nodejs/security-wg/badge" alt="OpenSSF scorecard"/></a>
+
 </p>
 
 
