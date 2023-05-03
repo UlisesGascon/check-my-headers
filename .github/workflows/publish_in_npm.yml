@@ -19,6 +19,8 @@ jobs:
       - name: Run npm install ci
         run: npm ci
       - name: Publish package
-        run: npm publish --ignore-scripts --access public
+        uses: slsa-framework/slsa-github-generator/.github/workflows/builder_nodejs_slsa3.yml@5dfe44f2f2806e28957c9de7aaa1fb9973921187
+        with:
+          run-scripts: "publish-packages"
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          node-auth-token: ${{ secrets.NPM_TOKEN }}
