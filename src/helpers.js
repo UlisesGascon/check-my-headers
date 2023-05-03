@@ -1,4 +1,4 @@
-const rp = require('request-promise')
+const got = require('got')
 
 const isUrlValid = (url = '') => {
   if (typeof (url) !== 'string') return false
@@ -6,11 +6,9 @@ const isUrlValid = (url = '') => {
   return regex.test(url)
 }
 
-const makeRequest = (uri) => {
-  return rp({
-    uri,
-    transform: (body, { headers, statusCode }) => ({ headers, statusCode })
-  })
+const makeRequest = async (url) => {
+  const { headers, statusCode } = await got(url)
+  return { headers, statusCode }
 }
 
 module.exports = {

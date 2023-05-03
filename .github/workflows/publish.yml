@@ -1,14 +1,37 @@
-name: Publish Library in Docker
+name: Publish Library
 on:
   release:
     types:
       - created
 jobs:
-  build:
+  prepare:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 19.x, 20.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build on Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
+      - name: Run npm install ci
+        run: npm ci
+  publish-in-npm:
+    needs: prepare
+    uses: slsa-framework/slsa-github-generator/.github/workflows/builder_nodejs_slsa3.yml@5dfe44f2f2806e28957c9de7aaa1fb9973921187
+    with:
+      node-version: 18.16.0
+      run-scripts: "ci"
+    secrets:
+      node-auth-token: ${{ secrets.NPM_TOKEN }}
+  publish-in-docker:
+    needs: publish-in-npm
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set output
       id: vars

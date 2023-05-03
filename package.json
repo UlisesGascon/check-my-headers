@@ -54,13 +54,15 @@
   },
   "dependencies": {
     "chalk": "4.1.2",
-    "request": "2.88.2",
-    "request-promise": "4.2.6"
+    "got": "11.8.6"
   },
   "jest": {
     "snapshotSerializers": [
       "jest-serializer-ansi"
     ]
+  },
+  "engines": {
+    "node": ">=16"
   },
   "snyk": true
 }
