@@ -6,7 +6,7 @@ const cleanUp = () => {
 }
 
 // Mocking
-jest.mock('request-promise')
+jest.mock('got')
 
 // Reset Mocks
 beforeEach(cleanUp)

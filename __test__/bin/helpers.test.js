@@ -5,7 +5,7 @@ const checkMyHeaders = require('../../src/index')
 expect.addSnapshotSerializer(serializer)
 
 // Mocking
-jest.mock('request-promise')
+jest.mock('got')
 
 const consoleOrg = console.log
 const consoleError = console.error
